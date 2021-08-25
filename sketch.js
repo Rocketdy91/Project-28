@@ -39,7 +39,7 @@ function setup() {
 
 	tree = new Tree(1050,580);
 	ground = new Ground(width/2,600,width,20);
-
+  launcher = new Launcher(stone.body,{x:235,y:430})
   
 
 	Engine.run(engine);
@@ -92,7 +92,7 @@ function draw() {
 function mouseDragged()
 {
   // Set position of stone when mouse is dragged
-	Matter.Body.setPosition(mango1.body, {x:mouseX, y:mouseY});
+	Matter.Body.setPosition(stone.body, {x:mouseX, y:mouseY});
 }
 
 function mouseReleased()
